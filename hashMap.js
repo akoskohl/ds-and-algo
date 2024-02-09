@@ -67,7 +67,10 @@ fillHashTable(fillAmount);
 // print hash table infos
 const keys = myHashTable.keys();
 const size = myHashTable.size();
+const colloisons = fillAmount - size;
+
 console.log("There are " + size + " keys in the hash table");
+console.log("There are " + colloisons + " colloisons in the hash table")
 console.log("The keys are: " + keys);
 
 // TODO : colloisons to fix and/or list
