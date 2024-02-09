@@ -72,6 +72,11 @@ const colloisons = fillAmount - size;
 console.log("There are " + size + " keys in the hash table");
 console.log("There are " + colloisons + " colloisons in the hash table")
 console.log("The keys are: " + keys);
+console.log("index 5 exist? " + myHashTable.exists(5));
+console.log("index 6 exist? " + myHashTable.exists(6));
+console.log("index 7 exist? " + myHashTable.exists(7));
+console.log("index 8 exist? " + myHashTable.exists(8));
+console.log("index 9 exist? " + myHashTable.exists(9));
 
 // TODO : colloisons to fix and/or list
 
