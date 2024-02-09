@@ -60,6 +60,17 @@ const myHashTable = new HashTable(50);
 fillHashTable(25);
 const keys = myHashTable.keys();
 const size = myHashTable.size();
+console.log("There are " + size + " keys in the hash table");
+console.log("The keys are: " + keys);
+console.log(myHashTable.exists(5));
+console.log(myHashTable.exists(6));
+console.log(myHashTable.exists(7));
+console.log(myHashTable.exists(8));
+console.log(myHashTable.exists(9));
+
+// colloisons to fix anad/or list
+
+
 // helper functions
 
 function fillHashTable(int) {
