@@ -39,9 +39,20 @@ class HashTable {
         }
         return keysArray;
     }
+    size() {
+        let counter = 0;
+        for (let i = 0; i < this.data.length; i++) {
+            if(this.data[i]) {
+                counter++;
+            }
+        }
+        return counter;
+    }
 }
 const myHashTable = new HashTable(50);
 fillHashTable(25);
+const keys = myHashTable.keys();
+const size = myHashTable.size();
 // helper functions
 
 function fillHashTable(int) {
