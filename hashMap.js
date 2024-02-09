@@ -48,7 +48,14 @@ class HashTable {
         }
         return counter;
     }
+    exists(key) {
+        if(this.data[key]) {
+            return true;
+        }
+        return false;
+    }
 }
+
 const myHashTable = new HashTable(50);
 fillHashTable(25);
 const keys = myHashTable.keys();
