@@ -2,14 +2,14 @@ class HashTable {
     constructor(size) {
         this.data = new Array(size);
     }
-    _hash(key) {
+    _hash(key) { // private hash method, returns hash
         let hash = 0;
         for(let i = 0; i < key.length; i++) {
             hash = (hash + key.charCodeAt(i) * i) % this.data.length;
         }
         return hash; 
     }
-    set(key, value) {
+    set(key, value) { // public set method, sets key and value
         let address = this._hash(key);
         if(!this.data[address]) {
             this.data[address] = [];
@@ -17,7 +17,7 @@ class HashTable {
         this.data[address].push([key, value]);
         return this.data;
     }
-    get(key) {
+    get(key) { // public get method, returns value based on key
         let address = this._hash(key);
         const currentBucket = this.data[address];
         if(currentBucket) {
@@ -29,7 +29,7 @@ class HashTable {
         }
         return undefined;
     }
-    keys() {
+    keys() { // public keys method, returns all keys
         const keysArray = [];
         for (let i = 0; i < this.data.length; i++) {
             if(this.data[i]) {
@@ -39,7 +39,7 @@ class HashTable {
         }
         return keysArray;
     }
-    size() {
+    size() { // public size method, returns amount of keys
         let counter = 0;
         for (let i = 0; i < this.data.length; i++) {
             if(this.data[i]) {
@@ -48,7 +48,7 @@ class HashTable {
         }
         return counter;
     }
-    exists(key) {
+    exists(key) { // public exists method, returns true if key exists
         if(this.data[key]) {
             return true;
         }
@@ -62,13 +62,6 @@ const keys = myHashTable.keys();
 const size = myHashTable.size();
 console.log("There are " + size + " keys in the hash table");
 console.log("The keys are: " + keys);
-console.log(myHashTable.exists(5));
-console.log(myHashTable.exists(6));
-console.log(myHashTable.exists(7));
-console.log(myHashTable.exists(8));
-console.log(myHashTable.exists(9));
-
-// colloisons to fix anad/or list
 
 
 // helper functions
