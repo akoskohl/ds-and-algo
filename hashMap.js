@@ -56,16 +56,25 @@ class HashTable {
     }
 }
 
+// create new hash table
 const myHashTable = new HashTable(50);
 fillHashTable(25);
+
+// fill hash table
+const fillAmount = 25;
+fillHashTable(fillAmount);
+
+// print hash table infos
 const keys = myHashTable.keys();
 const size = myHashTable.size();
 console.log("There are " + size + " keys in the hash table");
 console.log("The keys are: " + keys);
 
+// TODO : colloisons to fix and/or list
 
 // helper functions
 
+// fill hash table with random strings
 function fillHashTable(int) {
     for (let i = 0; i < int; i++) {
         rand1 = generateRandomString(10);
@@ -74,6 +83,7 @@ function fillHashTable(int) {
     }
 }
 
+// generate random string
 function generateRandomString(length) {
     let result = '';
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
