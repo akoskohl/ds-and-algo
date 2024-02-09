@@ -58,7 +58,6 @@ class HashTable {
 
 // create new hash table
 const myHashTable = new HashTable(50);
-fillHashTable(25);
 
 // fill hash table
 const fillAmount = 25;
