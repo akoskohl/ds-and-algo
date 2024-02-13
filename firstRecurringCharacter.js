@@ -27,3 +27,10 @@ function firstRecurringCharacter(input) {
     }
     console.log("This array has no recurring char.")
 }
+
+console.log(array1)
+console.log("array1: " + firstRecurringCharacter(array1))
+console.log(array2)
+console.log("array2: " + firstRecurringCharacter(array2))
+console.log(array3)
+console.log("array3: " + firstRecurringCharacter(array3))
