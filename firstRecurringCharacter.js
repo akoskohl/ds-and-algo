@@ -16,6 +16,9 @@ array3 = [2,3,4,5]
 array4 = []
 
 function firstRecurringCharacter(input) {
+    if (input === null || input === undefined || input.length === 0) {
+        console.log("This array is empty")
+    }
     let map = [];
     for (let i = 0; i < input.length; i++) {
         if (map.includes(input[i])) {
@@ -34,3 +37,5 @@ console.log(array2)
 console.log("array2: " + firstRecurringCharacter(array2))
 console.log(array3)
 console.log("array3: " + firstRecurringCharacter(array3))
+console.log(array4)
+console.log("array4: " + firstRecurringCharacter(array4))
