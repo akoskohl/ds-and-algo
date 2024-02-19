@@ -1,6 +1,13 @@
 // Description: Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
 // sortedArray = mergeSortedArray(array1, array2)
 
+let array1 = []
+let array2 = []
+let sortedArray = []
+
+// fill the arrays with random intigers
+fillArrayWithRandomIntigers(array1, 12)
+fillArrayWithRandomIntigers(array2, 9)
 // helper functions
 
 // Testing my solution
