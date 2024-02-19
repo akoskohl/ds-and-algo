@@ -8,6 +8,14 @@ let sortedArray = []
 // fill the arrays with random intigers
 fillArrayWithRandomIntigers(array1, 12)
 fillArrayWithRandomIntigers(array2, 9)
+
+// sort the arrays
+array1 = array1.sort(function(a,b){return a - b})
+array2 = array2.sort(function(a,b){return a - b})
+
+// print the arrays
+console.log(array1);
+console.log(array2);
 // helper functions
 
 // Testing my solution
