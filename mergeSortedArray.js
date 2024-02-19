@@ -16,6 +16,12 @@ array2 = array2.sort(function(a,b){return a - b})
 // print the arrays
 console.log(array1);
 console.log(array2);
+
+// merge the arrays and print the result
+sortedArray = mergeSortedArray(array1, array2)
+console.log(sortedArray)
+
+
 // helper functions
 
 // Testing my solution
