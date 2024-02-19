@@ -1,6 +1,27 @@
 // Description: Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
 // sortedArray = mergeSortedArray(array1, array2)
 
+function mergeSortedArray(array1, array2) {
+    let i = 1
+    let j = 1
+    const sorted = []
+    array1Item = array1[0]
+    array2Item = array2[0]
+
+    while (array1Item || array2Item) {
+        if(!array2Item || array1Item < array2Item) {
+            sorted.push(array1Item)
+            array1Item = array1[i]
+            i++
+        }else {
+            sorted.push(array2Item)
+            array2Item = array2[j]
+            j++
+        }
+    }
+    return sorted
+}
+
 let array1 = []
 let array2 = []
 let sortedArray = []
