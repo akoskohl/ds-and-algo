@@ -19,6 +19,11 @@ class LinkedList {
         this.head = newNode
         this.length++
     }
+    insert (index, value) {
+        const newNode = new Node(value)
+        const leader = this.traverseToIndex(index-1)
+    traverseToIndex (index) {
+    }
 }
 const myLinkedList = new LinkedList(10);
 myLinkedList.append(5)
