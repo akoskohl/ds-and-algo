@@ -23,6 +23,14 @@ class LinkedList {
         const newNode = new Node(value)
         const leader = this.traverseToIndex(index-1)
     traverseToIndex (index) {
+        let counter = 0
+        let currentNode = this.head
+        while (counter !== index) {
+            currentNode = currentNode.next
+            // that will throw an error, tail should be handled differently
+            counter++
+        }
+        return currentNode
     }
 }
 const myLinkedList = new LinkedList(10);
