@@ -14,3 +14,7 @@ class LinkedList {
         this.length++;
     }
 }
+const myLinkedList = new LinkedList(10);
+myLinkedList.append(5)
+myLinkedList.append(16)
+myLinkedList.append(0)
