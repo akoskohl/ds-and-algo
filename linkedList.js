@@ -42,9 +42,16 @@ class LinkedList {
         return currentNode
     }
 }
+
 const myLinkedList = new LinkedList(10);
 myLinkedList.append(5)
 myLinkedList.append(16)
 myLinkedList.append(0)
+
 console.log(myLinkedList.traverseToIndex(3))
+
 myLinkedList.prepend(1)
+
+myLinkedList.insert(2,3)
+myLinkedList.insert(20,28)
+
