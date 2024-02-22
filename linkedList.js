@@ -20,6 +20,10 @@ class LinkedList {
         this.length++
     }
     insert (index, value) {
+        if (index >= this.length) {
+            console.log("index is out of bound, appended to the end")
+            return this.append(value)
+        }
         const newNode = new Node(value)
         const leader = this.traverseToIndex(index-1)
         const pointer = leader.next
