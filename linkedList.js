@@ -1,3 +1,12 @@
+// create a linked list with a head and a tail, starting reference is 10->5->16
+
+class Node {
+    constructor(value) {
+        this.value = value
+        this.next = null
+    }
+}
+
 class LinkedList {
     constructor(value) {
         this.head = {
