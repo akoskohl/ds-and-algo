@@ -22,6 +22,11 @@ class LinkedList {
     insert (index, value) {
         const newNode = new Node(value)
         const leader = this.traverseToIndex(index-1)
+        const pointer = leader.next
+        leader.next = newNode
+        newNode.next = pointer
+        this.length++
+    }
     traverseToIndex (index) {
         let counter = 0
         let currentNode = this.head
