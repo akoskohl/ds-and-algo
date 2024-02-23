@@ -86,6 +86,18 @@ class LinkedList {
     return this.printList();
   }
 
+  find(value) {
+    let currentNode = this.head;
+    let index = 0;
+    while (currentNode !== null) {
+      if (currentNode.value === value) {
+        console.log(index);
+      }
+      currentNode = currentNode.next;
+      index++;
+    }
+    return -1; // Value not found
+  }
 }
 
 const myLinkedList = new LinkedList(10);
