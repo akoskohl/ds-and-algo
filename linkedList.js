@@ -112,6 +112,13 @@ myLinkedList.prepend(1);
 myLinkedList.insert(2, 3);
 myLinkedList.insert(20, 28);
 
+myLinkedList.printList();
+myLinkedList.remove(2);
+myLinkedList.printList();
 
 
+myLinkedList.find(1);
+myLinkedList.find(5);
 
+myLinkedList.printList();
+myLinkedList.reverse();
