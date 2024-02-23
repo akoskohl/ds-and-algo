@@ -57,7 +57,17 @@ class LinkedList {
       // that will throw an error, tail should be handled differently
       counter++;
     }
+    return currentNode;
+  }
+  printList() {
+    const array = [];
+    let currentNode = this.head;
+    while (currentNode !== null) {
+      array.push(currentNode.value);
+      currentNode = currentNode.next;
     }
+    console.log(array);
+  }
     }
     }
 
@@ -75,10 +85,6 @@ myLinkedList.prepend(1);
 myLinkedList.insert(2, 3);
 myLinkedList.insert(20, 28);
 
-console.log(myLinkedList.traverseToIndex(3))
 
-myLinkedList.prepend(1)
 
-myLinkedList.insert(2,3)
-myLinkedList.insert(20,28)
 
