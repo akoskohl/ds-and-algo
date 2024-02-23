@@ -57,36 +57,8 @@ class LinkedList {
       // that will throw an error, tail should be handled differently
       counter++;
     }
-    insert (index, value) {
-        if (index >= this.length) {
-            console.log("index is out of bound, appended to the end")
-            return this.append(value)
-        }
-        const newNode = new Node(value)
-        const leader = this.traverseToIndex(index-1)
-        const pointer = leader.next
-        leader.next = newNode
-        newNode.next = pointer
-        this.length++
     }
-    traverseToIndex (index) {
-        let counter = 0
-        let currentNode = this.head
-        while (counter !== index) {
-            currentNode = currentNode.next
-            // that will throw an error, tail should be handled differently
-            counter++
-        }
-        return currentNode
     }
-    printList(){
-        const array = []
-        let currentNode = this.head
-        while (currentNode !== null) {
-            array.push(currentNode.value)
-            currentNode = currentNode.next
-        }
-        console.log(array)
     }
 
 }
