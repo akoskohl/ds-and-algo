@@ -7,3 +7,16 @@ class Node {
         this.prev = null
     }
 }
+
+class DoublyLinkedList {
+    constructor(value) {
+        this.head = {
+            value: value,
+            next: null,
+            previous: null
+        }
+        this.tail = this.head
+        this.prev = this.head
+        this.length = 1
+    }
+}
