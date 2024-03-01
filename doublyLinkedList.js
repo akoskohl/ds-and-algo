@@ -26,4 +26,12 @@ class DoublyLinkedList {
         this.tail = newNode
         this.length++
     }
+    prepend(value){
+        const newNode = new Node(value)
+        newNode.next = this.head
+        this.head.prev = newNode
+        this.head = newNode
+        // this.previous is default to null, so no change
+        this.length++
+    }
 }
