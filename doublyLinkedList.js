@@ -19,4 +19,11 @@ class DoublyLinkedList {
         this.prev = this.head
         this.length = 1
     }
+    append(value) {
+        const newNode = new Node(value)
+        this.tail.next = newNode
+        newNode.prev = this.tail
+        this.tail = newNode
+        this.length++
+    }
 }
