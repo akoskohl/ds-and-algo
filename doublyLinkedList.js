@@ -43,4 +43,11 @@ class DoublyLinkedList {
         leader.next = pointer
         this.length--
     }
+    printList(){
+        const array = []
+        let currentNode = this.head
+        while (currentNode !== null) {
+            array.push(currentNode.value)
+            currentNode = currentNode.next
+        }
 }
