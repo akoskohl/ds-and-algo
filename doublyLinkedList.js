@@ -34,4 +34,13 @@ class DoublyLinkedList {
         // this.previous is default to null, so no change
         this.length++
     }
+    remove (index) {
+        if (index >= this.length) {
+            console.log("index is out of bound, cannote remove anything")
+        }
+        const leader = this.traverseToIndex(index-1)
+        const pointer = this.traverseToIndex(index+1)
+        leader.next = pointer
+        this.length--
+    }
 }
