@@ -51,3 +51,11 @@ class DoublyLinkedList {
             currentNode = currentNode.next
         }
 }
+const myDoublyLinkedList = new DoublyLinkedList(10)
+myDoublyLinkedList.append(5)
+myDoublyLinkedList.append(16)
+// myDoublyLinkedList.append(0)
+myDoublyLinkedList.printList()
+
+myDoublyLinkedList.prepend(1)
+myDoublyLinkedList.printList()
